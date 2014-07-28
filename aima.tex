@@ -1,4 +1,4 @@
-\section{Artificial Intelligence}
+\section{Artificial Intelligence: A Modern Approach}
 
 \subsection{Chapter 1-5 (July 22)}
 
@@ -20,4 +20,46 @@
 \item Minimax
 \item Alpha-beta pruning
 \item Expectimax
+\end{itemize}
+
+\subsection{Chapter 6-9 (July 25)}
+\subsection*{Discussions}
+\begin{itemize}
+\item K-consistency -- generalization of individual consistency
+\item Reduction to binary constraints -- introduce variables, dual graphs
+\item path consistency -- remove pairs or singletons
+\item backjumping -- completeness; backjumping undoes any variables that were set after the node you backjump to
+\item Forward Checking $\subset$ Arc Consistency
+\item 6.5 -- favorite section for questions
+\begin{itemize}
+  \item Tree Structured CSP -- enforce directed arc consistency $\rightarrow$ no backtracking needed
+  \item Cut sets -- iterate over all possible assignments to the cut set; cut set leaves remaining graph as tree
+  \item Tree decomposition -- junction tree for CSPs! -- graph with subsets of variables, tree structured solver enforces variable consistency. 
+\end{itemize}
+\item Basic logic modus ponens/and resolution
+\item models $\rightarrow$ possible worlds, simplest inference = model-checking -- $\alpha \implies \beta$ iff $M(\alpha) \subseteq M(\beta)$.
+\item Forward Chaining -- Horn Clauses + Definite Clauses; important idea is the lhs of implications are positive conjunctions. That property saves backtracking over incorrect assignments. 
+\item DPLL -- DFS with Heuristics; what do we need to know
+\item Satisfiablility Problems are usually easy
+\item frame problem, fluents, 
+\item belief states -- represent 'belief' as things that could be true
+\item SATPlan -- be super verbose or problems arise
+\item object/relations/functions
+\item quantifiers $\exists$, $\forall$
+\end{itemize}
+
+\subsection*{Topics for Review}
+\begin{itemize}
+\item CSPs -- know them
+\item consistency: node, arc, path, strong-k
+\item heuristics: minimum remaining value, degree, least constrained
+\item backjumping/conflict directed
+\item local search
+\item Tree Structured- CSPs
+\item knowledge base
+\item syntax
+\item possible worlds/models
+\item entailment
+\item horn clauses/forward chaining
+\item (logical) state estimation
 \end{itemize}
