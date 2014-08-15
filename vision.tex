@@ -1,0 +1,36 @@
+\section{Vision}
+
+\subsection{Chapter 1, 7, 11 (August 12)}
+
+\subsubsection*{Discussions}
+\begin{itemize}
+\item Difference between perspective, weak perspective, orthographic (see table 1.1 on page 29)
+\item Decomposition of projection matrix into calibration and rotation/translation
+\item Essential and fundamental matrix derivations
+\item Binocular reconstruction -- why only four constraints instead of six?
+\item Rectification -- mainly makes finding correspondences easier, epipoles move to infinity
+\item Difference between correlation vs. edge matching -- first one is correspondences between pixels, second one is higher level (between edges)
+\item Multi-scale edge matching -- why second derivative filter? Because we want to match zero crossings (which are edges) to other zero crossings
+\item Structure from motion: isn't equ 8.2 good enough? (Hard optimization problem, optimizing other things can be easier)
+\item Uncalibrated weak-perspective - why does this work, since orthographic assumes points are on planes (it's because points are still in 3d, ortohgraphic is just the projection method)
+\end{itemize}
+
+\subsubsection*{Topics for Review}
+\begin{itemize}
+\item Perspective models
+\item Camera intrinsics and extrinsics
+  \begin{itemize}
+    \item Intrinsics: center X/Y, scale X/Y, skew
+    \item Extrinsics: rotation, translation
+  \end{itemize}
+\item Camera calibration and recovery of intrinsics/extrinsics
+\item Essential/fundamental matrices
+\item Binocular reconstruction
+\item Local methods for binocular fusion (correlation between patches, multi-scale edge matching)
+\item Global methods for binocular fusion (essentially find energy function, minimize it)
+\item Structure from motion - set up constraints, solve nonlinear least squares
+\item Weak calibration - estimate epipolar geometry, then do binocular stereopsis
+\item Eight point algorithm - compute F, decompose to find E, decompose to find R and t
+\item Uncalibrated weak-perspective - affine epipolar geometry/calibration
+\item Uncalibrated perspective cameras, bundle adjustment
+\end{itemize}
